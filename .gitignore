@@ -1,0 +1,30 @@
+# Binaries (Large files > 100MB)
+bin/
+includes/ffmpeg-*
+
+# Temp and scratch
+scratch/
+temp/
+engine/*.info.json
+engine/*.mp4
+engine/*.wav
+engine/*.txt
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# PHP/Web
+node_modules/
+vendor/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
