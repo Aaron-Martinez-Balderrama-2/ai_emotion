@@ -5,8 +5,8 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'db_antigravity');
 define('DB_USER', 'root');
-define('DB_PASS', 'root');
-define('APIFY_TOKEN', 'TU_APIFY_TOKEN_AQUI');
+define('DB_PASS', ''); // Cambia esto por tu contraseña de MySQL (en XAMPP suele ser vacio)
+define('APIFY_TOKEN', 'TU_TOKEN_DE_APIFY_AQUI'); // Reemplaza con tu token de Apify
 
 /**
  * Establece la conexión con la base de datos usando PDO
