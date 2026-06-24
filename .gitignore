@@ -1,0 +1,23 @@
+# Carpetas temporales y binarias
+bin/
+temp/
+scratch/
+
+# Variables de entorno y credenciales
+core/env.php
+
+# Archivos de caché y logs de descargas
+engine/*.info.json
+engine/*.mp3
+engine/*.mp4
+engine/*.webm
+engine/*.part
+engine/*.ytdl
+
+# Logs del sistema
+*.log
+
+# Archivos del sistema operativo y editores
+.DS_Store
+.vscode/
+.idea/
