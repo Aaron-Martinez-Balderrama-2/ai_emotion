@@ -13,13 +13,17 @@ if (!defined('DB_USER')) define('DB_USER', 'root');
 if (!defined('DB_PASS')) define('DB_PASS', '');
 
 // Claves de API
-if (!defined('APIFY_TOKEN')) define('APIFY_TOKEN', 'tu_token_de_apify_aqui');
+if (!defined('APIFY_TOKEN')) define('APIFY_TOKEN', 'apify_api');
 
 /**
  * Establece la conexión con la base de datos usando PDO
  */
 function fn_conexion_bd()
 {
+    static $db_conexion = null;
+    if ($db_conexion !== null) {
+        return $db_conexion;
+    }
     try {
         $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4";
         $opciones = [
@@ -27,7 +31,8 @@ function fn_conexion_bd()
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
-        return new PDO($dsn, DB_USER, DB_PASS, $opciones);
+        $db_conexion = new PDO($dsn, DB_USER, DB_PASS, $opciones);
+        return $db_conexion;
     } catch (PDOException $e) {
         die("Error de conexión: " . $e->getMessage());
     }

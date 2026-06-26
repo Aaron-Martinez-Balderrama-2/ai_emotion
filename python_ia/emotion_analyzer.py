@@ -232,9 +232,20 @@ def generar_plan_marketing(transcripcion, comentarios, comentarios_con_autor=Non
     }
 
     try:
-        res = requests.post(OLLAMA_URL, json=payload, timeout=900)
-        res.raise_for_status()
-        ia_res = res.json().get("response", "{}")
+        if os.environ.get("MOCK_OLLAMA") == "1":
+            ia_res = json.dumps({
+                "repetir": "transporte, educación, gestión escolar",
+                "evitar": "violencia, retrasos",
+                "rentabilidad": "El análisis de rentabilidad indica que el video tiene una aceptación media-alta. Se recomienda seguir tratando estos temas con una mayor profundidad.",
+                "calificacion": "8",
+                "edad_promedio": "25-34",
+                "nuevo_guion": "Párrafo 1 gancho: La educación es lo primero. Párrafo 2 desarrollo: Necesitamos escuelas equipadas. Párrafo 3 comentarios: Ustedes lo pidieron y responderemos. Párrafo 4 llamado: Acompáñanos a construir el futuro.",
+                "sentimientos_red": {palabra: "positivo" if palabra in ["transporte", "educación", "gestión"] else "neutro" for palabra in nube_simple}
+            })
+        else:
+            res = requests.post(OLLAMA_URL, json=payload, timeout=900, proxies={"http": None, "https": None})
+            res.raise_for_status()
+            ia_res = res.json().get("response", "{}")
         
         # Como usamos format="json", la respuesta debería ser un JSON directo.
         try:

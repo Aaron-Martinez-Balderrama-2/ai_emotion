@@ -21,3 +21,4 @@ engine/*.ytdl
 .DS_Store
 .vscode/
 .idea/
+/vendor/
