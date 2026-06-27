@@ -60,7 +60,7 @@ function fn_procesar_videos_pendientes() {
         
         // --- EXTRAER 500 COMENTARIOS CON APIFY ---
         echo "[Apify] Iniciando descarga de 500 comentarios...\n";
-        $comments_data = fn_obtener_comentarios_tiktok($url, 500); 
+        $comments_data = fn_obtener_comentarios_tiktok($url, 400); 
         
         if (isset($comments_data['error'])) {
             echo "[!] Error en Apify: " . $comments_data['error'] . ". Continuando solo con transcripción.\n";

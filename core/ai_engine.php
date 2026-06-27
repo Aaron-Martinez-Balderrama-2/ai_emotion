@@ -24,7 +24,7 @@ class AIEngine {
             $stmt_v->execute([$video_id]);
             $video = $stmt_v->fetch();
 
-            $stmt_c = $db->prepare("SELECT usuario, comentario FROM tb_comentarios WHERE cod_video = ? LIMIT 500");
+            $stmt_c = $db->prepare("SELECT usuario, comentario FROM tb_comentarios WHERE cod_video = ? LIMIT 400");
             $stmt_c->execute([$video_id]);
             $rows = $stmt_c->fetchAll();
             $comentarios = array_column($rows, 'comentario');

@@ -232,7 +232,7 @@ def generar_plan_marketing(transcripcion, comentarios, comentarios_con_autor=Non
     }
 
     try:
-        res = requests.post(OLLAMA_URL, json=payload, timeout=900)
+        res = requests.post(OLLAMA_URL, json=payload, timeout=1800)
         res.raise_for_status()
         ia_res = res.json().get("response", "{}")
         
