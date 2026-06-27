@@ -1,4 +1,7 @@
 <?php
+
+// vendor/bin/phpunit tests/Pruebas_sistema/SecurityTest.php --testdox
+
 /**
  * tests/E2E/SecurityTest.php
  * ─────────────────────────────────────────────────────────────────────────────

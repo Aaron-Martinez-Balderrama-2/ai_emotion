@@ -1,5 +1,7 @@
 <?php
 
+// vendor/bin/phpunit tests/Pruebas_unitarias/PhpUnit/ColossusTest.php --testdox
+
 use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../core/colossus.php';

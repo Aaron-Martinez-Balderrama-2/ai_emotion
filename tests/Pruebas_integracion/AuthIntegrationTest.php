@@ -1,4 +1,7 @@
 <?php
+
+// vendor/bin/phpunit tests/Pruebas_integracion/AuthIntegrationTest.php --testdox
+
 /**
  * tests/Integration/AuthIntegrationTest.php
  * ─────────────────────────────────────────────────────────────────────────────

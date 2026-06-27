@@ -1,4 +1,7 @@
 <?php
+
+// vendor/bin/phpunit tests/Pruebas_integracion/AIEngineTest.php --testdox
+
 /**
  * tests/Integration/AIEngineTest.php
  * ─────────────────────────────────────────────────────────────────────────────

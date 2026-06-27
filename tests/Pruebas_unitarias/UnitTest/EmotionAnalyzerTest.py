@@ -1,5 +1,7 @@
 import unittest
 
+# python -m unittest -v tests/Pruebas_unitarias/UnitTest/EmotionAnalyzerTest.py 
+
 from python_ia.emotion_analyzer import (
     inferir_genero_por_nombre,
     calcular_demografia_por_comentarios,

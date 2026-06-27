@@ -1,4 +1,8 @@
 <?php
+
+// vendor/bin/phpunit tests/Pruebas_sistema/VideoAnalysisFlowTest.php --testdox
+
+
 /**
  * tests/E2E/VideoAnalysisFlowTest.php
  * ─────────────────────────────────────────────────────────────────────────────

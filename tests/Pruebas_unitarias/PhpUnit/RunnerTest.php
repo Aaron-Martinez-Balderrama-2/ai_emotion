@@ -1,5 +1,7 @@
 <?php
 
+// vendor/bin/phpunit tests/Pruebas_unitarias/PhpUnit/RunnerTest.php --testdox
+
 use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../core/ai_engine.php';
